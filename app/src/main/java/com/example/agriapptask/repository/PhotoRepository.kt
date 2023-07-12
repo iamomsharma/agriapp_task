@@ -14,6 +14,7 @@ class PhotoRepository(private val apiService : ApiService) {
         get() = photoMutableLiveData
 
     suspend fun getPhoto(){
+
         val result = apiService.getPhoto()
         if (result.body() != null)
         {

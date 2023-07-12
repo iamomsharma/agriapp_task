@@ -10,7 +10,6 @@ import kotlinx.coroutines.launch
 class PhotoViewModel(private val photoRepository: PhotoRepository) : ViewModel()
 {
     init {
-
         viewModelScope.launch() {
             photoRepository.getPhoto()
         }
